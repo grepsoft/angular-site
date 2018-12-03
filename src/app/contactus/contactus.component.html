@@ -1,0 +1,45 @@
+<section class="container-fluid pt-5 mb-2 bg-light">
+    <div class="alert alert-success text-center" role="alert">
+      <h4 class="alert-heading">Contact Us</h4>
+    </div>
+
+    <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+        <div class="form-group row">
+          <label for="name" class="col-sm-2 col-form-label">Name</label>
+          <div class="col-sm-10">
+            <input [(ngModel)]="contactModel.name" name = "name" type="text" 
+            class="form-control" id="name" placeholder="Name" required #name="ngModel">          
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Name is required</div>      
+          </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="email" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input [(ngModel)]="contactModel.email" name="email" type="email" 
+              class="form-control" id="email" placeholder="Email" required #email="ngModel">
+              <div [hidden]="email.valid || email.pristine" class="alert alert-danger">Email is required</div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="phone" class="col-sm-2 col-form-label">Phone</label>
+            <div class="col-sm-10">
+              <input [(ngModel)]="contactModel.phone" name="phone" type="tel" class="form-control" id="phone" placeholder="Phone">
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <label for="message" class="col-sm-2 col-form-label">Message</label>
+            <div class="col-sm-10">
+                <textarea [(ngModel)]="contactModel.message" name="message" class="form-control" cols="20" maxlength="250" id="message" name="Summary" rows="2"></textarea>
+            </div>
+        </div>        
+        <div class="form-group row">
+          <div class="col-sm-2 offset-sm-10">
+            <button [disabled]="contactForm.form.invalid" type="submit" class="btn btn-success w-100">Submit</button>
+          </div>
+        </div>
+      </form>
+</section>
+

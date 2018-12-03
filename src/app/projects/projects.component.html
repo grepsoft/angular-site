@@ -1,0 +1,58 @@
+<section class="container-fluid pt-5 mb-2 bg-light">
+    <div class="alert alert-success text-center" role="alert">
+        <h4 class="alert-heading">Projects</h4>
+      </div>
+  <div class="row">
+      <div class="col-md pt-1">
+          <div class="card" [ngClass]="mouseOverClass.cms"  (mouseenter)="highlightItem($event.type, 'cms')" (mouseleave)="highlightItem($event.type, 'cms')">
+            <div class="card-header">
+               Content Management System
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">OpticalThirty8</h5>
+              <p class="card-text">
+                  Optical38 wanted to move away form paper based invoicing and order intake to digital one.They wanted to be able to track orders and 
+                  send text message notification to customes when their order was ready and also reminding them about appointments. <br />                  
+                  We took their paper based invoice system and converted it into web based system. It enables their employees to walk around the store
+                  with their iPads and input orders. Through the web based system they are also able to schedule appointments and maintain inventory.
+                  </p>              
+            </div>
+          </div>
+      </div> 
+
+    <div class="col-md pt-1">
+      <div class="card" [ngClass]="mouseOverClass.pnd"  (mouseenter)="highlightItem($event.type, 'pnd')" (mouseleave)="highlightItem($event.type, 'pnd')">
+        <div class="card-header">
+            Pickup and Delivery
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">ABCDev</h5>
+          <p class="card-text">
+              ABCDev has clients in the transportation industry and they wanted an app that can be used for pickup and delivery. They
+              wanted the ability for drivers to log in and out, scan barcodes, view assignments, collect signatures, complete tasks,
+              change freight type all on a mobile device.
+              </p>          
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md pt-1">
+        <div class="card" [ngClass]="mouseOverClass.lbs"  (mouseenter)="highlightItem($event.type, 'lbs')" (mouseleave)="highlightItem($event.type, 'lbs')">
+          <div class="card-header">
+            Location-Based Service
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">ABCDev</h5>
+            <p class="card-text">
+                ABCDev has clients in the transportation industry and they wanted an app that can be used for proof of delivery
+                running on Android. <br />
+                We wrote an Android app running on the Zebra TC-56 hardware that enables a driver to take picture. The app also burns
+                the timestamp and gps coordinates on the image and send it to a server. The client can then
+                see the image(s) later on and make sure the delivery is made to the right place in case of a dispute.        
+                </p>            
+          </div>
+        </div>
+      </div>
+     
+  </div>
+</section>

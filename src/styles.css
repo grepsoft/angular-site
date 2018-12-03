@@ -1,1 +1,98 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+  }
+  
+  body, html{
+      height: 100%;
+  }
+  
+  /***********************************************
+              MENU
+  ************************************************/
+  #menuToggle
+  {
+    display: block;
+    position: fixed;
+    margin-top: 25px;
+    margin-left: 25px;
+    
+    z-index: 2;
+    
+    -webkit-user-select: none;
+    user-select: none;
+  }
+    #menuToggle button
+    {
+      color: greenyellow;    
+      cursor: pointer;  
+      background: none;
+    }
+  
+    #menuToggle button > i {
+      font-size: 2.5em;
+    }
+  /*
+   * Make this absolute positioned
+   * at the top left of the screen
+   */
+  #menu
+  {
+    position: fixed;
+    height: 100%;
+    width: 270px;
+    padding: 50px;
+    padding-top: 125px;
+    z-index: 1;
+    background: #495057;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;  
+    box-shadow: 5px 10px 18px #050505c7;
+    font-family: 'Raleway', sans-serif;
+    overflow-y: auto;
+  }
+  
+    #menu li
+    {
+      padding: 10px 0;
+      font-size: 22px;
+    }
+  
+    #menu a
+    {
+      transition: color 0.3s ease;
+      text-decoration: none;
+      color: #6feb8c;
+    }
+    
+    #menu a:hover
+    {
+      color: #d4d1d1;
+    }
+  
+    #menu .menubar-brand {
+      font-size: 2em;
+      position: fixed;
+      top: 25px;   
+      color: #3cc73c;
+    }
+  
+    #menu .menubar-brand:hover{
+      color: #26e426;
+    }  
+  
+  /* active menu item */
+  .active {
+    color: #f0c32f !important;
+    font-weight: bold;
+  }
+  
+  .wrapper {
+    min-height: 100%;
+    margin: 0 0 -60px; /* pulls the footer up by 60px otherwise it drops */
+  }
+  
+  .push {
+    height: 60px; /* must be same height as the footer. This also prevents the footer from
+    covering any content */
+  }

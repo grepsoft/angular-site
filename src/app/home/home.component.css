@@ -1,0 +1,101 @@
+/***********************************************
+            HERO
+************************************************/
+.hero {      
+    /* Sizing */
+    height: 100vh;
+
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Text styles */
+    text-align: center;
+    
+    /* Background styles */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
+                        url("../../assets/images/hero_image.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;    
+
+    color: whitesmoke;
+}
+  .hero .hero-inner h1 {
+    font-size: 3em;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .hero .hero-inner h2 {
+    font-family: 'PT Sans', sans-serif;
+  }
+
+  /*********************
+      Services icons
+*********************/
+#mobile {
+    content: url("../../assets/images/mobile_icn.png");
+  }
+  #desktop {
+    content: url("../../assets/images/pc_icn.png");
+  }
+  #web {
+    content: url("../../assets/images/web_icn.png");
+  }
+
+  /*********************************************
+        INTRO
+**********************************************/
+.intro {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.25em;
+  }
+  
+    .intro p {
+      padding: 50px 20px;
+      text-align: center;
+    }
+  
+    .intro img {
+      vertical-align: middle;
+    }
+    
+  /*********************
+    Media Queries
+  *********************/
+  /* for screens less than 600px */
+  @media screen and (max-width: 600px) {
+  
+    .hero .hero-inner {
+      margin-top: -100px;
+    }
+  
+    .hero .hero-inner h1 {
+      font-size: 26px;    
+    }
+    .hero .hero-inner h2 {
+      font-size: 20px;    
+    }
+  
+    .intro {
+      font-size: 0.85em;
+    }
+  
+    .intro p {
+      padding: 25px 20px;
+    }
+  
+    .intro .logo img {
+      width: 100px;
+    }
+  
+    .intro .services img {
+      width: 60px;
+    }
+  
+    .intro .services h2 {
+      font-size: 1.2em;
+    }
+  }
