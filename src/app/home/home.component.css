@@ -53,6 +53,10 @@
     font-size: 1.25em;
   }
   
+    .intro #logo {
+      content: url("../../assets/images/logo.png");
+    }
+
     .intro p {
       padding: 50px 20px;
       text-align: center;
