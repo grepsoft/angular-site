@@ -1,5 +1,5 @@
 import { 
-  Component, OnInit, Inject, PLATFORM_ID,Input
+  Component, OnInit, Inject, PLATFORM_ID
 } from '@angular/core';
 import { Contact } from './contactData';
 import { HttpClient } from '@angular/common/http';
@@ -19,7 +19,6 @@ export class ContactusComponent implements OnInit {
   private captcharesponse:string;
 
   constructor(private http:HttpClient,
-    @Inject(PLATFORM_ID) private readonly platformId: any,
     private captchaService:GcaptchaServiceService,
     private configService: ConfigService) { }
 

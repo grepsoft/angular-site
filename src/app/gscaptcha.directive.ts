@@ -1,4 +1,4 @@
-import { Directive, OnInit, ViewContainerRef, Renderer2, ElementRef, Output } from '@angular/core';
+import { Directive, OnInit, Renderer2, ElementRef, Output } from '@angular/core';
 import { GcaptchaServiceService } from './gcaptcha-service.service';
 import { ConfigService } from './config.service';
 
@@ -9,8 +9,7 @@ import { ConfigService } from './config.service';
 export class GscaptchaDirective implements OnInit {
   
   private THEME = "dark";
-  constructor(public viewContainerRef: ViewContainerRef, 
-    private rndr: Renderer2,
+  constructor(private rndr: Renderer2,
     private el: ElementRef,
     private captchaService:GcaptchaServiceService,
     private configService: ConfigService) { }
