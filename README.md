@@ -1,3 +1,7 @@
+# Setup
+In config service make sure to add your Google captcha site key and your endpoint. 
+The endpoint is where you would post form data to and then possibly do captcha validation.
+
 # MySite
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.2.
