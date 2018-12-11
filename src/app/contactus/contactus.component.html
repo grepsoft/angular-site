@@ -16,9 +16,9 @@
         <div class="form-group row">
             <label for="email" class="col-sm-2 col-form-label">Email</label>
             <div class="col-sm-10">
-              <input [(ngModel)]="contactModel.email" name="email" type="email" 
+              <input [(ngModel)]="contactModel.email" name="email" type="email" email="true" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$"
               class="form-control" id="email" placeholder="Email" required #email="ngModel">
-              <div [hidden]="email.valid || email.pristine" class="alert alert-danger">Email is required</div>
+              <div [hidden]="email.valid || email.pristine" class="alert alert-danger">Correct email is required</div>
             </div>
         </div>
 
@@ -34,7 +34,14 @@
             <div class="col-sm-10">
                 <textarea [(ngModel)]="contactModel.message" name="message" class="form-control" cols="20" maxlength="250" id="message" name="Summary" rows="2"></textarea>
             </div>
-        </div>        
+        </div>
+
+        <div class="form-group row">
+            <div class="col offset-sm-2">                
+                <div appGscaptcha></div>
+            </div>
+        </div>                
+        
         <div class="form-group row">
           <div class="col-sm-2 offset-sm-10">
             <button [disabled]="contactForm.form.invalid" type="submit" class="btn btn-success w-100">Submit</button>

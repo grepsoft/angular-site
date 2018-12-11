@@ -16,11 +16,14 @@
     /* Background styles */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
                         url("../../assets/images/hero_image.jpeg");
-    background-size: cover;
+    /* background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;    
-
+    background-attachment: fixed;     */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     color: whitesmoke;
 }
   .hero .hero-inner h1 {
